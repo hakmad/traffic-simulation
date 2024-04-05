@@ -1,0 +1,14 @@
+#!/bin/bash
+
+rm result.csv
+echo "Left Period,Left Arrival Rate,Right Period,Right Arrival Rate,Left Number of Cars,Left Average Waiting Time,Left Maximum Waiting Time,Left Time to Clear,Right Number of Cars,Right Average Waiting Time,Right Maximum Waiting Time,Right Time to Clear," > result.csv
+
+for lp in $(seq 1 1 10); do
+	for rp in $(seq 1 1 10); do
+		for lar in $(seq 0.1 0.1 0.9); do
+			for rar in $(seq 0.1 0.1 0.9); do
+				./runSimulations $lp $lar $rp $rar
+			done
+		done
+	done
+done

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -e
+
+echo "Compiling..."
+gcc -ansi -c -I./src src/util.c -o util.o
+gcc -ansi -c -I./src src/queue.c -o queue.o
+gcc -ansi -c -I./src src/runSimulations.c -o runSimulations.o
+
+echo "Linking..."
+gcc util.o queue.o runSimulations.o -lgsl -lgslcblas -o runSimulations
+
+echo "Cleaning up..."
+rm -f *.o
+
+echo "Done."

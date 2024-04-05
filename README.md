@@ -16,9 +16,9 @@ the amount of time it takes to clear the queue.
 ## Requirements
 
 This simulation is written in ANSI C and requires a C compiler (the [GNU C
-Compiler](https://gcc.gnu.org/)
-- `gcc` - is recommended). Additionally, the [GNU Scientific 
-    Library](https://www.gnu.org/software/gsl/) for generating random numbers.
+Compiler](https://gcc.gnu.org/) - `gcc` - is recommended). Additionally, the
+[GNU Scientific Library](https://www.gnu.org/software/gsl/) for generating
+random numbers.
 
 ## Usage
 
